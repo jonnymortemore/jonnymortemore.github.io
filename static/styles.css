@@ -1,0 +1,27 @@
+:root {
+    --nav: rgb(121, 106, 106);
+    --main: ivory;
+    --font: black;
+}
+
+
+body {
+    background-color: var(--main);
+    color: var(--font);
+}
+
+nav {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+    padding: 10px;
+}
+
+
+header {
+    background-color: var(--nav);
+    width: 100%;
+    margin: 0;
+}

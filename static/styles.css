@@ -67,7 +67,7 @@ main {
     margin-bottom: auto;
     color: var(--main);
     background: none;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
@@ -80,10 +80,11 @@ main {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    border-radius: 5px;
 }
 
 .header_button:hover {
-    border: 1px solid var(--main);
+    border: 2px solid var(--main);
 }
 
 .header_button:before {
@@ -95,7 +96,7 @@ main {
     height: 100%;
     transition: 0.2s linear;
     z-index: -1;
-    background: var(--accent)
+    background: var(--accent2)
   }
 
 .header_button:hover:before {

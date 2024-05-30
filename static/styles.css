@@ -35,8 +35,8 @@ header {
 }
 
 #header_extension {
-    border-Top: 100px solid var(--nav);
-    border-left: 30vw solid transparent;
+    border-Top: 200px solid var(--nav);
+    border-left: 100vw solid transparent;
     animation-name: shrink;
     animation-duration: 2.5s;
     animation-fill-mode: forwards;

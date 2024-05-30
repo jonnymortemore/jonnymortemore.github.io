@@ -59,6 +59,7 @@ main {
     margin-right: auto;
     margin-top: 20px;
     width: 80%;
+    font-family: var(--fontStyle);
 }
 
 .header_button {

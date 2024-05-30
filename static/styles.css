@@ -1,7 +1,10 @@
 :root {
-    --nav: lightgrey;
-    --main: ivory;
-    --font: black;
+    --nav: #273469;
+    --main: #FAFAFF;
+    --font: #30343F;
+    --accent: #E4D9FF;
+    --accent2: #1E2749;
+    --fontStyle: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -18,14 +21,92 @@ nav {
     justify-content: space-evenly;
     width: 80%;
     padding: 10px;
+    height:  80px; 
 }
 
 header {
     background-color: var(--nav);
     width: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*border-bottom-right-radius: 200px; */
+}
+
+#header_extension {
+    border-Top: 100px solid var(--nav);
+    border-left: 30vw solid transparent;
+    animation-name: shrink;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease;
+}
+
+@keyframes shrink {
+    from {
+        border-Top: 100px solid var(--nav);;
+    }
+    to {
+        border-Top: 0px solid var(--nav);;
+    }
+    
 }
 
 main {
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.header_button {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--main);
+    background: none;
+	border: 1px solid transparent;
+	padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+	cursor: pointer;
+    font-family: var(--fontStyle);
+    font-weight: bold;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.header_button:hover {
+    border: 1px solid var(--main);
+}
+
+.header_button:before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 1s linear;
+    z-index: -1;
+    background: var(--accent)
+  }
+
+.header_button:hover:before {
+width: 100%;
+}
+
+
+#logo-cap {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--main);
+    padding: 10px;
+    font-family: var(--fontStyle);
+    margin-left: 30px;
 }

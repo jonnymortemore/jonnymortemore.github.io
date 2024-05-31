@@ -2,6 +2,7 @@
     --nav: #273469;
     --main: #FAFAFF;
     --font: #30343F;
+    --font2: black;
     --accent: #E4D9FF;
     --accent2: #1E2749;
     --fontStyle: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -111,4 +112,50 @@ width: 100%;
     padding: 10px;
     font-family: var(--fontStyle);
     margin-left: 30px;
+}
+
+.bold_with_line {
+    text-decoration: overline;
+    font-weight: bold;
+}
+
+a {
+    color:#30343F;
+}
+
+a:hover {
+    color: var(--font);
+    background-color: var(--accent);
+}
+
+
+/* About Me */
+#portrait {
+    width: 30%;
+}
+
+
+p {
+    font-size: 40px;
+    font-family: var(--fontStyle);
+    color: var(--font2);
+    vertical-align: middle;
+    text-align: center;
+    line-height: 150%;
+    animation-name: fade_in;
+    animation-duration: 1.5s;
+}
+
+#me_intro {
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

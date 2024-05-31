@@ -2,7 +2,7 @@
     --nav: #273469;
     --main: #FAFAFF;
     --font: #30343F;
-    --font2: black;
+    --font2: rgb(78, 75, 75);
     --accent: #E4D9FF;
     --accent2: #1E2749;
     --fontStyle: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -128,6 +128,27 @@ a:hover {
     background-color: var(--accent);
 }
 
+/*footer*/
+
+footer {
+    margin-top: 20px;
+    height: 200px;
+    background-color: var(--nav);
+    padding-top: 20px;
+}
+
+footer > p {
+    font-size: 20px;
+    color: var(--main);
+    font-family: var(--fontStyle);
+    text-align: center;
+    padding: 10px;
+}
+
+footer > a {
+    color: var(--accent);
+}
+
 
 /* About Me */
 #portrait {
@@ -135,7 +156,7 @@ a:hover {
 }
 
 
-p {
+.mainText {
     font-size: 40px;
     font-family: var(--fontStyle);
     color: var(--font2);

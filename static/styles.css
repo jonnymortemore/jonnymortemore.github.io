@@ -169,15 +169,17 @@ footer > p {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .social_link {
     text-decoration: none;
     padding: 10px;
-    border: 1px var(--accent2) solid;
+    border: 3px var(--accent2) solid;
     border-radius: 10px;
     color: var(--font);
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .social_link:hover {
@@ -188,7 +190,7 @@ footer > p {
 .contact_link {
     text-decoration: none;
     padding: 10px;
-    border: 2px var(--accent2) solid;
+    border: 3px var(--accent2) solid;
     border-radius: 10px;
     color: var(--font);
     margin-right: 10px;
@@ -197,7 +199,8 @@ footer > p {
     font-weight: bold;
     text-align: center;
     font-size: 25px;
-    line-height: 160%;
+    line-height: 200%;
+    margin-top: 10px;
 }
 
 .contact_link:hover {
@@ -219,6 +222,14 @@ footer > p {
 #me_intro {
     display: flex;
     flex-direction: row;
+}
+
+#cv {
+    width: 70%;
+    margin: auto;
+    font-family: var(--fontStyle);
+    font-size: 20px;
+    color: var(--font2);
 }
 
 @keyframes fade_in {

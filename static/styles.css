@@ -221,31 +221,6 @@ footer > p {
     flex-direction: row;
 }
 
-#cv {
-    position: relative; 
-    height: 0;
-    padding-bottom: 0; 
-    box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
-    margin-top: 5em; 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.9em; 
-    overflow: hidden;
-    border-radius: 8px; 
-    will-change: transform;
-}
-
-#cv_iframe {
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    top: 0; 
-    left: 0; 
-    border: none; 
-    padding: 0;
-    margin: 0;
-}
-
 @keyframes fade_in {
     0% {
         opacity: 0;
@@ -280,10 +255,6 @@ footer > p {
         padding-right: 30px;
         padding-bottom: 10px;
         padding-top: 10px;
-    }
-    #cv {
-        width: 70%; 
-        padding-top: 100%;
     }
 }
 

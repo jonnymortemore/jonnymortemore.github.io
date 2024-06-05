@@ -10,20 +10,11 @@
 }
 
 
+
 body {
     background-color: var(--main);
     color: var(--font);
     margin: 0;
-}
-
-nav {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 80%;
-    padding: 10px;
-    height:  80px; 
 }
 
 header {
@@ -33,7 +24,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*border-bottom-right-radius: 200px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav {
+    padding: 10px;
 }
 
 #header_extension {
@@ -101,14 +97,12 @@ width: 100%;
 }
 
 
-#logo-cap {
+#home_button {
     margin-top: auto;
     margin-bottom: auto;
     color: var(--main);
-    padding: 10px;
-    font-family: var(--fontStyle);
-    margin-left: 30px;
 }
+
 
 .bold_with_line {
     text-decoration: overline;
@@ -268,6 +262,17 @@ footer > p {
         padding-bottom: 10px;
         padding-top: 10px;
     }
+    #home_button {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    nav {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 1049px) {
@@ -284,13 +289,28 @@ footer > p {
         padding-right: 20px;
         padding-bottom: 10px;
         padding-top: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     #cv {
         width: 100%; 
     }
+    #home_button {
+        margin-left: 15px;
+        font-size: 20px;
+    }
+    
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
     .header_button {
         font-size: 18px;
         padding-left: 10px;
@@ -298,10 +318,8 @@ footer > p {
         padding-bottom: 10px;
         padding-top: 10px;
     }
-    #logo-cap {
-        display: none;
-    }
-    nav {
-        width: 100%;
+    #home_button {
+        margin-left: 8px;
+        font-size: 20px;
     }
 }

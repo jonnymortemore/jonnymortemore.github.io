@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('nav').querySelectorAll('button').forEach((el) => {
         el.addEventListener('click', (e) => hide_elements(e.target.id));
     })
+    document.querySelector('#home_button').addEventListener ('click', (e) => hide_elements(e.target.id))
 
 })
 

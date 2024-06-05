@@ -226,7 +226,7 @@ footer > p {
 
 #cv {
     width: 70%;
-    margin: auto;
+    margin: 20px auto 10px auto;
     font-family: var(--fontStyle);
     font-size: 20px;
     color: var(--font2);

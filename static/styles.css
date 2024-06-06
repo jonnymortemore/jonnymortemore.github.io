@@ -55,7 +55,6 @@ main {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
     width: 90%;
     font-family: var(--fontStyle);
 }
@@ -175,11 +174,13 @@ footer > p {
     color: var(--font);
     margin-right: 10px;
     margin-top: 10px;
+    box-shadow: 2px 2px 2px var(--accent2);
 }
 
 .social_link:hover {
     color: var(--accent);
     background-color: var(--accent2);
+    box-shadow: 2px 2px 2px var(--accent3);
 }
 
 .contact_link {
@@ -196,13 +197,19 @@ footer > p {
     font-size: 25px;
     line-height: 200%;
     margin-top: 10px;
+    box-shadow: 2px 2px 2px var(--accent2);
 }
 
 .contact_link:hover {
     color: var(--accent);
     background-color: var(--accent2);
+    box-shadow: 2px 2px 2px var(--accent3);
 }
 
+.section {
+    animation-name: fade_in;
+    animation-duration: 1.5s;
+}
 
 .mainText {
     font-family: var(--fontStyle);
@@ -210,9 +217,9 @@ footer > p {
     vertical-align: middle;
     text-align: center;
     line-height: 150%;
-    animation-name: fade_in;
-    animation-duration: 1.5s;
+    
 }
+
 
 #me_intro {
     display: flex;
@@ -278,7 +285,17 @@ footer > p {
 @media screen and (max-width: 1049px) {
     #me_intro {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    #intro_text {
+        position: relative;
+        padding-top: 80px;
+        top: -200px;
+        /*background-color: rgba(250,250,255, 0.8);*/
+        background: linear-gradient(to bottom, rgba(250, 250, 255, 0), rgba(250,250,255, 1) 20%);
+    }
+    #home {
+        margin-bottom: -200px;
     }
     .mainText {
         font-size: 30px;
@@ -298,6 +315,11 @@ footer > p {
     #home_button {
         margin-left: 15px;
         font-size: 25px;
+    }
+    #portrait {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
 }
@@ -321,5 +343,20 @@ footer > p {
     #home_button {
         margin-left: 8px;
         font-size: 20px;
+    }
+    #portrait {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #intro_text {
+        position: relative;
+        padding-top: 100px;
+        top: -200px;
+        /*background-color: rgba(250,250,255, 0.8);*/
+        background: linear-gradient(to bottom, rgba(250,250,255, 0), rgba(250,250,255, 1) 15%);
+    }
+    #home {
+        margin-bottom: -200px;
     }
 }

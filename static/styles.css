@@ -270,6 +270,35 @@ footer > p {
     transition: left 0.8s ease;
 }
 
+.carousel-button {
+    text-decoration: none;
+    padding: 10px;
+    border: 3px var(--accent2) solid;
+    border-radius: 10px;
+    color: var(--font);
+    margin-right: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px var(--accent2);
+    opacity: 0.5;
+}
+
+.carousel-button:hover {
+    color: var(--accent);
+    background-color: var(--accent2);
+    box-shadow: 2px 2px 2px var(--accent3);
+}
+
+.carousel-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position: relative;
+    top: -300px;
+}
+
+
+
 /* media queries */
 
 @media screen and (min-width: 1050px) {

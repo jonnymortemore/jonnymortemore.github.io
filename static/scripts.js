@@ -25,7 +25,7 @@ function moveCarousel(direction) {
     }
     // check left hasn't gone too far
     if (left > 0) {left = 0;}
-    let pages = -(Math.round((inner.childElementCount * iframe.offsetWidth) / size) - 1)*size;
+    let pages = -(Math.ceil((inner.childElementCount * iframe.offsetWidth) / size)-1) * size;
     if (left < pages) {
         left = pages;
     }

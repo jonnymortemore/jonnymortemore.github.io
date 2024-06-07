@@ -55,7 +55,7 @@ main {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 95%;
     font-family: var(--fontStyle);
 }
 
@@ -251,16 +251,15 @@ footer > p {
 /* Music */
 .music-iframe {
     border: none; 
-    width: 400px; 
-    height: 400px;
+    width: 380px; 
+    height: 380px;
     margin: -2px;
+    border-radius: 10px;
 }
 
 
 .carousel-outer {
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .carousel-inner {
@@ -271,33 +270,27 @@ footer > p {
 }
 
 .carousel-button {
-    text-decoration: none;
     padding: 10px;
-    border: 3px var(--accent2) solid;
     border-radius: 10px;
-    color: var(--font);
-    margin-right: 10px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 2px var(--accent2);
+    color: var(--nav);
     opacity: 0.5;
+    border: none;
+    margin: 5px;
+    background-color: transparent;
+    
 }
 
 .carousel-button:hover {
-    color: var(--accent);
-    background-color: var(--accent2);
-    box-shadow: 2px 2px 2px var(--accent3);
+    color: var(--accent3);
 }
 
-.carousel-buttons {
-    width: 100%;
+#music-carousel {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    position: relative;
-    top: -300px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
-
-
 
 /* media queries */
 
@@ -413,12 +406,8 @@ footer > p {
         margin-bottom: -200px;
     }
     .music-iframe {
-        width: 250px; 
-        height: 250px;
-    }
-    .carousel-buttons {
-        width: 100%;
-        top: -150px;
+        width: 270px; 
+        height: 270px;
     }
 }
 

@@ -24,10 +24,12 @@ function moveCarousel(direction) {
         left = amount;
     }
     // check left hasn't gone too far
-    if (left > 0) {left = 0;}
     let pages = -(Math.ceil((inner.childElementCount * iframe.offsetWidth) / size)-1) * size;
-    if (left < pages) {
+    if (left > 0) {
         left = pages;
+    }
+    if (left < pages) {
+        left = 0;
     }
     // move div left
     inner.style.left = `${left}px`;

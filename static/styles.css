@@ -148,6 +148,7 @@ footer > p {
     padding: 10px;
     border: 1px var(--accent) solid;
     border-radius: 10px;
+    height: 100%;
     color: var(--main);
     margin-right: 10px;
 }

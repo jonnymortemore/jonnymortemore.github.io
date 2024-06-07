@@ -251,8 +251,8 @@ footer > p {
 /* Music */
 .music-iframe {
     border: none; 
-    width: 500px; 
-    height: 500px;
+    width: 400px; 
+    height: 400px;
     margin: -2px;
 }
 
@@ -307,7 +307,7 @@ footer > p {
         flex-direction: row;
     }
     .mainText {
-        font-size: 40px;
+        font-size: 30px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -316,7 +316,7 @@ footer > p {
         height: 50%;
     }
     .header_button {
-        font-size: 25px;
+        font-size: 20px;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 10px;
@@ -351,10 +351,10 @@ footer > p {
         margin-bottom: -200px;
     }
     .mainText {
-        font-size: 30px;
+        font-size: 25px;
     }
     .header_button {
-        font-size: 25px;
+        font-size: 20px;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 10px;
@@ -413,8 +413,12 @@ footer > p {
         margin-bottom: -200px;
     }
     .music-iframe {
-        width: 300px; 
-        height: 300px;
+        width: 250px; 
+        height: 250px;
+    }
+    .carousel-buttons {
+        width: 100%;
+        top: -150px;
     }
 }
 

@@ -10,7 +10,6 @@
 }
 
 
-
 body {
     background-color: var(--main);
     color: var(--font);
@@ -91,7 +90,7 @@ main {
 width: 100%;
 }
 
-#home, #music, #about_me {
+#home, #music, #about_me, #jvd_games {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
@@ -308,16 +307,86 @@ footer > p {
 }
 
 /* JVD GAMES */
-#jvd_games {
-    background: url("/images/sps_background.png");
-    width: 100%;
-    background-color: var(--main);
-    margin-left: 0;
-    margin-right: 0;
-
+#sps_banner {
+    width: 70%;
+    height: auto;
 }
 
+#sps {
+    background: url("/images/sps_background.png");
+    background-color: var(--main);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
+#jvd {
+    background-color: var(--accent3);
+    color: var(--main);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#acdm {
+    background: url("/images/acdm_background.png");
+    background-color: var(--font);
+    color: var(--accent);
+    overflow: hidden;
+}
+
+.game-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    position: relative;
+    animation-name: rise-up;
+    animation-duration: 1s;
+    transition-timing-function: ease;
+    box-shadow: 5px 5px 5px rgba(78, 75, 75, 0.5);
+    
+}
+
+@keyframes rise-up {
+    0% {
+        left:-100px;
+    }
+    100% {
+        left: 0px;
+    }
+    
+}
+
+.game-text {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#game-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#clownImage {
+    animation-name: move;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    position: relative;
+    
+}
+
+@keyframes move {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -900px;
+    }
+    
+}
 /* media queries */
 
 @media screen and (min-width: 1050px) {
@@ -354,6 +423,10 @@ footer > p {
     }
     .band-header > h2 {
         margin-right: 20px;
+    }
+    .youtube {
+        width: 560px;
+        height: 315px;
     }
 }
 
@@ -409,6 +482,10 @@ footer > p {
     .band-header > h2 {
         margin-top: 5px;
         margin-bottom: 10px;
+    }
+    #sps_banner {
+        width: 100%;
+        height: auto;
     }
     
 }
@@ -471,6 +548,10 @@ footer > p {
         font-size: 20px;
         padding-left: 5px;
         padding-right: 5px;
+    }
+    .youtube {
+        width: 300px;
+        height: auto;
     }
 }
 

@@ -9,6 +9,11 @@
     --accent3: #aa4f84;
 }
 
+.flx-rw {
+    display: flex;
+    flex-direction: row;
+}
+
 
 body {
     background-color: var(--main);
@@ -362,6 +367,7 @@ footer > p {
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
+    font-family: var(--fontStyle);
 }
 
 #game-links {

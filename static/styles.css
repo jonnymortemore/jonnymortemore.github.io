@@ -52,10 +52,6 @@ nav {
 }
 
 main {
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
     font-family: var(--fontStyle);
 }
 
@@ -95,6 +91,12 @@ main {
 width: 100%;
 }
 
+#home, #music, #about_me {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
 
 #home_button {
     margin-top: auto;
@@ -299,7 +301,21 @@ footer > p {
     justify-content: left;
 }
 
+.band-text {
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
+/* JVD GAMES */
+#jvd_games {
+    background: url("/images/sps_background.png");
+    width: 100%;
+    background-color: var(--main);
+    margin-left: 0;
+    margin-right: 0;
+
+}
 
 
 /* media queries */
@@ -450,6 +466,11 @@ footer > p {
         height: 100px;
         margin-top: auto;
         margin-bottom: auto;
+    }
+    .band-text {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 

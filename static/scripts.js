@@ -29,7 +29,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     })
+    window.addEventListener('popstate', (event) => {
+        if (event.state && event.state.divId) {
+            // Show the div corresponding to the state
+            hide_elements(event.state.divId);
+        }
+    });
+    //for if url is changed after page loaded
+    window.addEventListener('hashchange', () => {
+        updateHashURL();
+    });
 
+    // Function to handle initial load based on URL hash
+    function updateHashURL() {
+        const hash = window.location.hash.substring(1);
+        console.log(hash)
+        if (hash) {
+            hide_elements(hash);
+        }
+    }
 
 })
 
@@ -73,6 +91,7 @@ let updateIframe = false;
 
 function hide_elements(id) {
     document.querySelectorAll('.section').forEach((el) => {
+        console.log(id);
         if (id.includes(el.id)) {
             el.hidden = false;
             //reload music iframes that aren't showing the first time music tab chosen
@@ -87,7 +106,10 @@ function hide_elements(id) {
                     el.src = el.src;
                     updateIframe = true;
                 })
+                
             }
+            // Push state to history
+            history.pushState({ divId: el.id}, '', `#${el.id}`);
         }
         else {
             el.hidden = true;

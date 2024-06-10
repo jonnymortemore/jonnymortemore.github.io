@@ -1,3 +1,8 @@
+let currentPage = 0 // current page for carousel
+let totalPages = 0 //total pages for carousel
+let carouselSize = 0 // size of carousel
+
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('nav').querySelectorAll('button').forEach((el) => {
         el.addEventListener('click', (e) => hide_elements(e.target.id));
@@ -6,7 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('#right').onclick = () => {moveCarousel("left")};
     document.querySelector('#left').onclick = () => {moveCarousel("right")};
-
+    //event listener for transition end for carousel to hide iframes
+    document.querySelector('.carousel-inner').addEventListener('transitionend', (e) => {
+        e.target.querySelectorAll('iframe').forEach((el) => {
+            //set all iframes to hidden then set the ones on current page for visible. 
+            el.style.visibility = "hidden";
+            let position = Array.from(el.parentNode.children).indexOf(el)
+            //figure out if on page based on page size
+            // element per page
+            let elementPerPage = carouselSize / el.offsetWidth
+            // the minimum and maximum child position index values
+            let min = elementPerPage * (currentPage)
+            let max = (elementPerPage * currentPage) + elementPerPage
+            //compare current child positon to min and max
+            if (position >= min && position < max) {
+                el.style.visibility = "visible";
+            }
+        })
+    })
 
 
 })
@@ -14,25 +36,35 @@ document.addEventListener('DOMContentLoaded', function() {
 function moveCarousel(direction) {
     const inner = document.querySelector('.carousel-inner');
     const iframe = document.querySelector('.music-iframe')
-    let size = document.querySelector('.carousel-outer').offsetWidth;
+    //size of page window
+    carouselSize = document.querySelector('.carousel-outer').offsetWidth;
     let amount = 0;
     // add or minus size based on direction
-    direction == "left" ? amount = -size : amount = size;
+    direction == "left" ? amount = -carouselSize : amount = carouselSize;
     let left = parseInt(inner.style.left) + amount;
     // if nan - set to amount
     if (isNaN(left)) {
         left = amount;
     }
-    // check left hasn't gone too far
-    let pages = -(Math.ceil((inner.childElementCount * iframe.offsetWidth) / size)-1) * size;
+    // total pages - starting at 0
+    totalPages = Math.ceil((inner.childElementCount * iframe.offsetWidth) / carouselSize)-1
+    // get the full left movement
+    let leftLimit = -(totalPages) * carouselSize;
     if (left > 0) {
-        left = pages;
+        left = leftLimit;
     }
-    if (left < pages) {
+    if (left < leftLimit) {
         left = 0;
     }
     // move div left
     inner.style.left = `${left}px`;
+    //get current page
+    currentPage = Math.abs(left/carouselSize);
+    // set all carousel elements to visible for transition.
+    inner.querySelectorAll('iframe').forEach((el) => {
+        el.style.visibility = "visible";
+    })
+    
 
 }
 
@@ -46,17 +78,14 @@ function hide_elements(id) {
             //reload music iframes that aren't showing the first time music tab chosen
             if (el.id == "music" && !updateIframe) {
                 //calculate the size of the carousel based on music div size
-                const music = document.querySelector('#music').offsetWidth;
                 const outer = document.querySelector('.carousel-outer');
                 const iframe = document.querySelector('.music-iframe').offsetWidth;
-                console.log(`${iframe * Math.round(music / iframe)}px`);
                 outer.style.width = `${iframe * Math.floor(outer.offsetWidth / iframe)}px`;
 
                 // reset iframes to make sure images correct
                 document.querySelectorAll(".music-iframe").forEach((el) => {
                     el.src = el.src;
                     updateIframe = true;
-                    console.log("yes");
                 })
             }
         }

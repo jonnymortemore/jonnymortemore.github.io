@@ -91,7 +91,6 @@ let updateIframe = false;
 
 function hide_elements(id) {
     document.querySelectorAll('.section').forEach((el) => {
-        console.log(id);
         if (id.includes(el.id)) {
             el.hidden = false;
             //reload music iframes that aren't showing the first time music tab chosen
@@ -106,10 +105,9 @@ function hide_elements(id) {
                     el.src = el.src;
                     updateIframe = true;
                 })
-                
             }
             // Push state to history
-            history.pushState({ divId: el.id}, '', `#${el.id}`);
+            history.pushState({divId: el.id}, '', `#${el.id}`);
         }
         else {
             el.hidden = true;

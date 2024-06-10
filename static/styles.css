@@ -304,6 +304,7 @@ footer > p {
     animation-name: come-in-left;
     animation-duration: 1s;
     transition-timing-function: ease;
+    color: var(--font);
 }
 
 /* JVD GAMES */

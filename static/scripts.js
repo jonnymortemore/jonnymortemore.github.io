@@ -108,6 +108,7 @@ function hide_elements(id) {
             }
             // Push state to history
             history.pushState({divId: el.id}, '', `#${el.id}`);
+            window.scrollTo(0, 0);
         }
         else {
             el.hidden = true;

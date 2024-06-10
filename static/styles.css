@@ -45,16 +45,6 @@ nav {
     transition-timing-function: ease;
 }
 
-@keyframes shrink {
-    from {
-        border-Top: 100px solid var(--nav);;
-    }
-    to {
-        border-Top: 0px solid var(--nav);;
-    }
-    
-}
-
 main {
     font-family: var(--fontStyle);
 }
@@ -237,16 +227,12 @@ footer > p {
     font-family: var(--fontStyle);
     font-size: 20px;
     color: var(--font2);
+    animation-name: come-in-left;
+    animation-duration: 1s;
+    transition-timing-function: ease;
+    position: relative;
 }
 
-@keyframes fade_in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 #portrait {
     margin-top: auto;
@@ -297,6 +283,8 @@ footer > p {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    animation: fade_in;
+    animation-duration: 3s;
 }
 
 .band-header {
@@ -309,6 +297,13 @@ footer > p {
     font-size: 20px;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+#all-band-text {
+    position: relative;
+    animation-name: come-in-left;
+    animation-duration: 1s;
+    transition-timing-function: ease;
 }
 
 /* JVD GAMES */
@@ -329,6 +324,7 @@ footer > p {
     color: var(--main);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-top: 20px;
 }
 
 #acdm {
@@ -345,20 +341,10 @@ footer > p {
     align-items: center;
     padding-bottom: 10px;
     position: relative;
-    animation-name: rise-up;
+    animation-name: come-in-left;
     animation-duration: 1s;
     transition-timing-function: ease;
     box-shadow: 5px 5px 5px rgba(78, 75, 75, 0.5);
-    
-}
-
-@keyframes rise-up {
-    0% {
-        left:-100px;
-    }
-    100% {
-        left: 0px;
-    }
     
 }
 
@@ -382,6 +368,64 @@ footer > p {
     animation-iteration-count: infinite;
     position: relative;
     
+}
+
+/* Web Design */
+#web_design {
+    width: 80%;
+    margin: 30px auto 10px auto;
+}
+
+#filmaculate {
+    padding: 10px;
+    margin-top: 50px;
+    animation-name: come-in-left;
+    animation-duration: 1s;
+    transition-timing-function: ease;
+    position: relative;
+}
+
+#gridImage {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.web-design-text {
+    margin-top: 0px;
+    font-size: 20px;
+    font-family: var(--fontStyle);
+    padding-right: 50px;
+}
+
+
+/* animations */ 
+@keyframes come-in-left {
+    0% {
+        left:-100px;
+    }
+    100% {
+        left: 0px;
+    }
+    
+}
+
+@keyframes shrink {
+    from {
+        border-Top: 100px solid var(--nav);;
+    }
+    to {
+        border-Top: 0px solid var(--nav);;
+    }
+    
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes move {

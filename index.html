@@ -78,6 +78,8 @@
                         <h2>British Museum 2017-2023</h2>
                         <p> I played a key role in collection management and logistics for the large scale Blythe House 
                         decant project, moving large collections to the new British Museum Archaeological Research Collection store. 
+                        I created a number of bespoke Excel programs, using Excel's underlying programming language VBA. 
+                        These were used to streamline packing processes as well as aiding storage design.
                         </p>
                         <p>I worked on a number of large scale exhibitions, such as 
                             <a class="main_a" href="https://www.britishmuseum.org/exhibitions/i-am-ashurbanipal-king-world-king-assyria"><i>I am Ashurbanipal king of the world, king of assyria</i></a>.
@@ -135,8 +137,35 @@
                 </div>
                 <div id="web_design" class="section" hidden>
                     <h1>Web Design</h1>
-                    <div>
-                        <h2>Filmaculate Grid</h2>
+                    <p class="web-design-text">I've spent a lot of 2023 and 2024 delving into the world is web design, 
+                    learning html, css and javascript as well as python based web frameworks such as django and flask.
+                    Here are the current fruit of my labours... 
+                    </p>
+                    <div id="filmaculate"> 
+                        <div class="flx-rw">
+                            <div>
+                                <div class="band-header">
+                                    <h2>Filmaculate Grid</h2>
+                                    <div class="band-links">
+                                        <a href="https://www.filmaculategrid.com/" class="fa fa-globe social_link fa-2x" target="_blank"></a>
+                                        <a href="https://twitter.com/filmaculategrid" class="fa fa-twitter social_link fa-2x" target="_blank"></a>
+                                        <a href="https://www.instagram.com/filmaculategrid/" class="fa fa-instagram social_link fa-2x" target="_blank"></a>
+                                        <a href="https://discord.com/invite/yrqMHWWS" class="fa-brands fa-discord social_link fa-2x" target="_blank"></a>
+                                    </div>
+                                </div>
+                                <p class="web-design-text">Filmaculate grid is a daily film trivia game I launched at the begining of 2024.
+                                Created using html, css and javascript with a python flask backend. All grids are generated using a 
+                                seperate python program. All grids are generated using TMDB data.
+                                </p>
+                                <h2>How to Play</h2>
+                                <p class="web-design-text">
+                                At the start of each row and column is an actor.
+                                Each grid square intersects with two actors that share a common film.
+                                Guess which film they starred in together, released in the year displayed!
+                                </p>
+                            </div>
+                            <img id="gridImage" src="https://www.filmaculategrid.com/static/images/currentGrid.png" alt="example of a grid">
+                        </div>    
                     </div>
                 </div>
                 <div id="music" class="section" hidden>
@@ -170,38 +199,40 @@
                         <button id="right" class="fa-solid fa-chevron-right carousel-button fa-2x"></button>
                     </div>
                     <br>
-                    <div class="band-header">
-                        <h2>The Heartbeat Generation</h2>
-                        <div class="band-links">
-                            <a href="https://open.spotify.com/artist/1C7BHIXLibegbu3AGsONz4" class="fa fa-spotify social_link fa-2x" target="_blank"></a>
-                            <a href="https://heartbeatgeneration.bandcamp.com/track/exist" class="fa fa-bandcamp social_link fa-2x" target="_blank"></a>
-                            <a href="https://www.youtube.com/@HeartbeatGeneration" class="fa fa-youtube social_link fa-2x" target="_blank"></a>
-                            <a href="https://www.instagram.com/heartbeatgeneration/" class="fa fa-instagram social_link fa-2x" target="_blank"></a>
+                    <div id="all-band-text">
+                        <div class="band-header">
+                            <h2>The Heartbeat Generation</h2>
+                            <div class="band-links">
+                                <a href="https://open.spotify.com/artist/1C7BHIXLibegbu3AGsONz4" class="fa fa-spotify social_link fa-2x" target="_blank"></a>
+                                <a href="https://heartbeatgeneration.bandcamp.com/track/exist" class="fa fa-bandcamp social_link fa-2x" target="_blank"></a>
+                                <a href="https://www.youtube.com/@HeartbeatGeneration" class="fa fa-youtube social_link fa-2x" target="_blank"></a>
+                                <a href="https://www.instagram.com/heartbeatgeneration/" class="fa fa-instagram social_link fa-2x" target="_blank"></a>
+                            </div>
                         </div>
-                    </div>
-                    <p class="band-text">The OG band formed in the 00's with my brother Chris and good friends Thazi and Jeff. 
-                    Decades worth of songs and gigs under our belt. A huge catalogue of songs, only a few of which have breached the surface.
-                    Always a chance of more to come. This is how we will never disppear. 
-                    </p>
-                    <div class="band-header">
-                        <h2>Jonny vs Dinosaur</h2>
-                        <div class="band-links">
-                            <a href="https://jonnyvsdinosaur.bandcamp.com/album/cant-say-goodbye" class="fa fa-bandcamp social_link fa-2x" target="_blank"></a>
-                            <a href="https://soundcloud.com/jonny-vs-dinosaur" class="fa fa-soundcloud social_link fa-2x" target="_blank"></a>
+                        <p class="band-text">The OG band formed in the 00's with my brother Chris and good friends Thazi and Jeff. 
+                        Decades worth of songs and gigs under our belt. A huge catalogue of songs, only a few of which have breached the surface.
+                        Always a chance of more to come. This is how we will never disppear. 
+                        </p>
+                        <div class="band-header">
+                            <h2>Jonny vs Dinosaur</h2>
+                            <div class="band-links">
+                                <a href="https://jonnyvsdinosaur.bandcamp.com/album/cant-say-goodbye" class="fa fa-bandcamp social_link fa-2x" target="_blank"></a>
+                                <a href="https://soundcloud.com/jonny-vs-dinosaur" class="fa fa-soundcloud social_link fa-2x" target="_blank"></a>
+                            </div>
                         </div>
-                    </div>
-                    <p class="band-text">The quintessential solo project with a silly name. 
-                    I released a number of songs under this moniker throughout the years. 
-                    Many demos hiding in the shadows...</p>
-                    <div class="band-header">
-                        <h2>Rex Collective</h2>
-                        <div class="band-links">
-                            <a href="https://open.spotify.com/artist/4zgeCok3a2CZ30Fmg2rfRN" class="fa fa-spotify social_link fa-2x" target="_blank"></a>
-                            <a href="https://jonnyvsdinosaur.bandcamp.com/track/the-come-down" class="fa fa-bandcamp social_link fa-2x" target="_blank"></a>
+                        <p class="band-text">The quintessential solo project with a silly name. 
+                        I released a number of songs under this moniker throughout the years. 
+                        Many demos hiding in the shadows...</p>
+                        <div class="band-header">
+                            <h2>Rex Collective</h2>
+                            <div class="band-links">
+                                <a href="https://open.spotify.com/artist/4zgeCok3a2CZ30Fmg2rfRN" class="fa fa-spotify social_link fa-2x" target="_blank"></a>
+                                <a href="https://jonnyvsdinosaur.bandcamp.com/track/the-come-down" class="fa fa-bandcamp social_link fa-2x" target="_blank"></a>
+                            </div>
                         </div>
+                        <p class="band-text">A special coming together of me, Chris and Thazi for a one off 
+                        recording in that far fetched land of 2017.</p>
                     </div>
-                    <p class="band-text">A special coming together of me, Chris and Thazi for a one off 
-                    recording in that far fetched land of 2017.</p>
                 </div>
             </main>
             <footer>

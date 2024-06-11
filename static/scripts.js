@@ -49,6 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    //on contact button click create email
+    document.querySelectorAll('.contact_link, #footer_contact').forEach((el) => {
+        el.addEventListener('click', () => {
+            let u = "superpuzzlesudoku";
+            let d = "gmail.com";
+            let e = u + "@" + d;
+            let m2l = "mai"
+            m2l += 'lto:' + e;
+            window.location.href = m2l;
+        });
+    });
+
 })
 
 function moveCarousel(direction) {

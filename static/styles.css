@@ -577,21 +577,19 @@ footer > p {
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 3px;
         margin-right: auto;
         margin-left: auto;
+        padding: 3px;
 
     }
     .header_button {
-        font-size: 18px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        font-size: 20px;
+        padding: 10px;
     }
     #home_button {
-        margin-left: 8px;
-        font-size: 20px;
+        margin: auto;
+        font-size: 22px;
     }
     #portrait {
         width: 80%;

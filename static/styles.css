@@ -405,6 +405,17 @@ footer > p {
     margin-bottom: 0;
 }
 
+/* 404 page */
+#error {
+    width: 80%;
+    font-family: var(--fontStyle);
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
 
 /* animations */ 
 @keyframes come-in-left {

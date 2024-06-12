@@ -400,6 +400,7 @@ footer > p {
     font-size: 20px;
     font-family: var(--fontStyle);
     padding-right: 50px;
+    line-height: 150%;
 }
 #htp {
     margin-bottom: 0;

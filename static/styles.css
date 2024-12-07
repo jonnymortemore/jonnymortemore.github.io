@@ -379,7 +379,7 @@ footer > p {
     margin: 30px auto 10px auto;
 }
 
-#filmaculate {
+#filmaculate, #cccah {
     padding: 10px;
     margin-top: 40px;
     animation-name: come-in-left;
@@ -393,6 +393,15 @@ footer > p {
 #gridImage {
     width: 300px;
     border-radius: 5px;
+}
+
+#cccahImage {
+    height: 300px;
+    width: auto;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid var(--accent2);
+    margin-right: 20px;
 }
 
 .web-design-text {
@@ -566,10 +575,19 @@ footer > p {
     #filmaculate {
         flex-direction: column;
     }
+    #cccah {
+        flex-direction: column-reverse;
+    }
     #gridImage {
         margin-left: auto;
         margin-right: auto;
         width: 250px;
+    }
+    #cccahImage {
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: auto;
     }
     
 }

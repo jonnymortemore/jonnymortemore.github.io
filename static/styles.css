@@ -32,8 +32,13 @@ header {
     padding-bottom: 10px;
 }
 
-nav {
+#header_nav {
     padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
 }
 
 #header_extension {
@@ -426,6 +431,67 @@ footer > p {
 
 }
 
+/* Hamburger Menu */
+
+#hamburger {
+    width: 100%;
+    background-color: var(--nav);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+#hamburger * {
+    animation: fade_in;
+    animation-duration: 0.5s;
+    transition-timing-function: ease;
+    position: relative;
+}
+
+#hamburger_button {
+    background-color: transparent;
+    border: none;
+    color: var(--main);
+    cursor: pointer;
+    padding-bottom: 0px;
+    padding: 15px;
+    font-size: 20px;
+    height: 100%;
+    margin-right: 10px;
+    display: none;
+}
+
+#hamburger_button:hover {
+    color: var(--nav);
+    background-color: var(--main);
+}
+
+.hamburger_nav_button {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--main);
+    background: none;
+	border: none;
+	cursor: pointer;
+    font-family: var(--fontStyle);
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+ .hamburger_nav_button:hover {
+    background-color: var(--main);
+    color: var(--nav);
+}
+
+
+
 
 /* animations */ 
 @keyframes come-in-left {
@@ -493,13 +559,7 @@ footer > p {
         margin-left: 20px;
         font-size: 30px;
     }
-    nav {
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 80%;
-    }
+    
     .band-header > h2 {
         margin-right: 20px;
     }
@@ -592,16 +652,16 @@ footer > p {
     
 }
 
-@media screen and (max-width: 500px) {
-    nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3px;
-        margin-right: auto;
-        margin-left: auto;
-        padding: 3px;
-
+@media  screen and (max-width: 800px) {
+    #header_nav {
+        display: none;
     }
+    #hamburger_button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
     .header_button {
         font-size: 20px;
         padding: 10px;

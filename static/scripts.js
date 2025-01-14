@@ -4,7 +4,10 @@ let carouselSize = 0 // size of carousel
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('nav').querySelectorAll('button').forEach((el) => {
+    document.querySelector("#header_nav").querySelectorAll('button').forEach((el) => {
+        el.addEventListener('click', (e) => hide_elements(e.target.id));
+    })
+    document.querySelector("#hamburger").querySelectorAll('button').forEach((el) => {
         el.addEventListener('click', (e) => hide_elements(e.target.id));
     })
     document.querySelector('#home_button').addEventListener ('click', (e) => hide_elements(e.target.id))
@@ -59,6 +62,29 @@ document.addEventListener('DOMContentLoaded', function() {
             m2l += 'lto:' + e;
             window.location.href = m2l;
         });
+    });
+
+    document.querySelector("#hamburger_button").addEventListener("click", () => {
+        let hamburger = document.querySelector("#hamburger");
+        let icon = document.querySelector('#hamburger-icon');
+        if (hamburger.style.display === "none") {
+            hamburger.style.display = "flex";
+            icon.className = "fa-solid fa-x";
+        }
+        else {
+            hamburger.style.display = "none";
+            icon.className = "fa-solid fa-bars";
+        }
+       
+    });
+
+    window.addEventListener('resize', () => {
+        if(window.innerWidth > 800) {
+            let hamburger = document.querySelector("#hamburger");
+            let icon = document.querySelector('#hamburger-icon');
+            hamburger.style.display = "none";
+            icon.className = "fa-solid fa-bars";
+        }
     });
 
 })

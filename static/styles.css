@@ -662,14 +662,6 @@ footer > p {
 }
 
 @media screen and (max-width: 500px) {
-    .header_button {
-        font-size: 20px;
-        padding: 10px;
-    }
-    #home_button {
-        margin: auto;
-        font-size: 22px;
-    }
     #portrait {
         width: 80%;
         margin-left: auto;
